@@ -16,12 +16,12 @@ export default {
             if (states.event[i].id === obj.id) {
                 states.event[i].type = 2;
                 states.event[i].time = func.getDate();
-                var item = states.event[i];
-                states.event.splice(i, 1);
+                //var item = states.event[i];
+                //states.event.splice(i, 1);为啥要先删除后添加0
                 break;
             }
         }
-        states.event.unshift(item);
+        //states.event.unshift(item);
         func.local.set(states);
     },
     [type.EVENTTODO](states, obj){
