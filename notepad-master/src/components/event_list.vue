@@ -45,7 +45,7 @@
     export default {
         data(){
             return {
-                collapse:[
+                collapse:[        //三行属性，未完成、已完成和已取消
                     {
                         show: true,
                     },
@@ -71,7 +71,7 @@
         },
         methods: {
             moveToDone(id){ //移至已完成
-                this.$store.dispatch('eventdone', id);
+                this.$store.dispatch('eventdone', id);//这不是在一个组件内通信吗，但是涉及state变化
             },
             moveToDo(id){ //移至未完成
                 this.$store.dispatch('eventtodo', id);

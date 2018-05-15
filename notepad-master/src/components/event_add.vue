@@ -21,10 +21,10 @@
                         content: '',
                         time: ''
                     };
-                self.content = self.content.trim();
+                self.content = self.content.trim();//去掉字符串空格
                 if(self.content){
                     params.content = self.content;
-                    self.$store.dispatch('addevent',params);
+                    self.$store.dispatch('addevent',params);//触发action
                     self.content = '';
                     self.$toast('添加成功');
                 }
